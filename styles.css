@@ -1,38 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-height: 100vh;
+    background-image: repeating-conic-gradient(#b58863 0% 25%, #f0d9b5 0% 50%);
+    background-size: 40px 40px;
+}
+header {
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    & img {
+        margin-left: 20px;
+    }
+    & nav {
+        & button {
+            height: 100%;
+            padding: 0 20px;
+            background-color: transparent;
+            border-style: none;
+            font-size: large;
+            font-weight: bold;
+        }
+        & button:hover {
+            background-image: linear-gradient(white, lightgrey);
+        }
+    }
+}
+h1 {
+    background-color: #ff1235;
+    text-shadow: 2px 1px white;
+    border: 5px double black;
+    padding: 10px;
+    margin: 10px;
+}
 .column {
     float: left;
     width: 50%;
 }
 #columnContainer {
     border: 5px double black;
-}
-header {
-    display: flex;
-    & button {
-        flex: 1;
-        border-style: none;
-        font-size: large;
-        font-weight: bold;
-        background-color: rgba(0, 0, 0, 0);
-    }
-    & button:hover {
-        background-image: linear-gradient(white, lightgrey);
-    }
-    & p {
-        display: flex;
-        flex: 1;
-        background-color: darkgray;
-        border-style: none;
-        align-items: center;
-        justify-content: center;
-    }
-}
-#background {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-image: url("SUA%20Logo.png");
-    background-size: cover;
-    background-position: top;
-    filter: blur(8px);
-    z-index: -1;
+    background-color: white;
 }
