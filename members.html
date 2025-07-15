@@ -6,19 +6,80 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mitglieder der SUA-Schachjugend</title>
         <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <style>
+            body {
+                background-image: repeating-conic-gradient(var(--dark) 0% 25%, var(--light) 0% 50%);
+                background-size: 80px 80px;
+            }
+            h2 {
+                margin-bottom: 10px;
+            }
+            section {
+                background-color: rgba(255, 255, 255, 0.5);
+                border: 2px dashed black;
+                margin: 0 auto 20px;
+                padding: 10px;
+                max-width: 80%;
+                width: fit-content;
+            }
+            .section {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                justify-content: space-around;
+            }
+            .profile {
+                background-color: white;
+                border: 2px solid black;
+                padding: 10px;
+                & img {
+                    height: 320px;
+                    width: 240px;
+                }
+            }
+        </style>
         <script defer type="application/javascript" src="script.js"></script>
     </head>
     <body>
-        <div id="background"></div>
         <header>
-            <a href="index.html"><img src="SUA%20Banner.png"></a>
-            <p>Mitglieder</p>
-            <button type="button" onclick="location.href='contact.html'">Kontakt</button>
-            <button type="button">Anmelden</button>
+            <a href="index.html"><img src="SUA%20Banner.png" alt="SUA Banner"></a>
+            <nav>
+                <button type="button" onclick="location.href='#'" id="current">Mitglieder</button>
+                <button type="button" onclick="location.href='contact.html'">Kontakt</button>
+                <button type="button" onclick="location.href='impressum.html'">Impressum</button>
+                <button type="button">Anmelden</button>
+            </nav>
         </header>
-        <h1>Liste der Mitglieder der Schachjugend: </h1>
-        <ul>
-            <li>Max Mustermann</li>
-        </ul>
+        <div id="hdiv">
+            <img id="flipped" class="spacer" src="favicon.ico" alt="Springer">
+            <h1>Alle Mitglieder unseres Vereins:</h1>
+            <img class="spacer" src="favicon.ico" alt="Springer">
+        </div>
+        <main>
+            <section>
+                <h2>Stammmitglieder</h2>
+                <div class="section">
+                    <div class="profile">
+                        <img src="Placeholder.png" alt="Lothar Stergar (-3/4 Jahre alt)">
+                        <details>
+                            <summary>Lothar Stergar</summary>
+                            Der Webmaster!
+                        </details>
+                    </div>
+                </div>
+            </section><section>
+                <h2>Jugendliche</h2>
+                <div class="section">
+                    <div class="profile">
+                        <img src="Placeholder.png" alt="Guillaume Vega--Grodwohl (-3/4 Jahre alt)">
+                        <details>
+                            <summary>Guillaume Vega--Grodwohl</summary>
+                            Der Webersteller!
+                        </details>
+                    </div>
+                </div>
+            </section>
+        </main>
     </body>
 </html>

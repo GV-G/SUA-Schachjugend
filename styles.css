@@ -2,45 +2,68 @@
     margin: 0;
     padding: 0;
 }
-body {
-    min-height: 100vh;
-    background-image: repeating-conic-gradient(#b58863 0% 25%, #f0d9b5 0% 50%);
-    background-size: 40px 40px;
+:root {
+    --red: #ff1235;
+    --light: #f0d9b5;
+    --dark: #b58863;
 }
 header {
-    background-color: rgba(255, 255, 255, 0.7);
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     & img {
         margin-left: 20px;
     }
-    & nav {
-        & button {
-            height: 100%;
-            padding: 0 20px;
-            background-color: transparent;
-            border-style: none;
-            font-size: large;
-            font-weight: bold;
+    & nav button {
+        height: 100%;
+        padding: 0 20px;
+        background-color: transparent;
+        color: var(--red);
+        border-style: none;
+        font-size: large;
+        font-weight: bold;
+        transition: 0.2s;
+        &:hover {
+            background-color: white;
+            color: black;
+            box-shadow: 0 0 5px 5px lightgrey inset;
+            border-radius: 10px;
         }
-        & button:hover {
-            background-image: linear-gradient(white, lightgrey);
+        &#current {
+            color: black;
         }
     }
 }
+#hdiv {
+    display: flex;
+}
 h1 {
-    background-color: #ff1235;
-    text-shadow: 2px 1px white;
-    border: 5px double black;
-    padding: 10px;
-    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 3px 3px 5px black;
+    border-radius: 50px;
+    width: fit-content;
+    padding: 15px 25px;
+    margin: 10px auto;
+    text-align: center;
 }
-.column {
-    float: left;
-    width: 50%;
+#flipped {
+    transform: scaleX(-1);
 }
-#columnContainer {
-    border: 5px double black;
-    background-color: white;
+.spacer {
+    height: 48px;
+    margin: auto 20px;
+}
+.brand {
+    color: var(--red);
+    text-shadow: 3px 3px 5px darkgrey;
+}
+p {
+    margin-bottom: 10px;
+}
+ul {
+    list-style-position: inside;
 }

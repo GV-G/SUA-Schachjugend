@@ -9,27 +9,55 @@
         <title>Schachjugend Sport-Union Annen</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <style>
+            body {
+                background-image: repeating-conic-gradient(var(--dark) 0% 25%, var(--light) 0% 50%);
+                background-size: 80px 80px;
+            }
+            #column-container {
+                background-image: linear-gradient(to bottom right, var(--light), var(--dark));
+                margin: 10px;
+                display: flex;
+            }
+            .column {
+                width: 50%;
+                margin: 10px;
+                padding: 5px;
+                border: 2px dotted darkgrey;
+            }
+        </style>
         <script defer type="application/javascript" src="script.js"></script>
     </head>
     <body>
         <header>
-            <img src="SUA%20Banner.png">
+            <a href="#"><img src="SUA%20Banner.png" alt="SUA Banner"></a>
             <nav>
                 <button type="button" onclick="location.href='members.html'">Mitglieder</button>
                 <button type="button" onclick="location.href='contact.html'">Kontakt</button>
+                <button type="button" onclick="location.href='impressum.html'">Impressum</button>
                 <button type="button">Anmelden</button>
             </nav>
         </header>
-        <h1>Willkommen bei der Jugendschachabteilung der Sport-Union Annen! </h1>
-        <div id="columnContainer">
-            <div class="column">
-                <h2>Neuigkeiten</h2>
-                <p>Etwas ist passiert!</p>
-            </div>
-            <div class="column">
-                <h2>Nächste Ereignisse</h2>
-                <p>Sommerferien</p>
-            </div>
+        <div id="hdiv">
+            <img id="flipped" class="spacer" src="favicon.ico" alt="Springer">
+            <h1>Willkommen bei der Jugendschachabteilung der <wbr><span class="brand">Sport-Union Annen</span>!</h1>
+            <img class="spacer" src="favicon.ico" alt="Springer">
         </div>
+        <main>
+            <div id="column-container">
+                <div class="column">
+                    <article>
+                        <h2>Neuigkeiten</h2>
+                        <p>Etwas ist passiert!</p>
+                    </article>
+                </div>
+                <div class="column">
+                    <article>
+                        <h2>Nächste Ereignisse</h2>
+                        <p>Sommerferien</p>
+                    </article>
+                </div>
+            </div>
+        </main>
     </body>
 </html>

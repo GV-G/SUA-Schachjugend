@@ -4,24 +4,44 @@
         <meta charset="UTF-8">
         <meta name="author" content="G. Vega--Grodwohl">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mitglieder der SUA-Schachjugend</title>
+        <title>Kontakt zur SUA-Schachjugend</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <style>
+            body {
+                background: linear-gradient(to bottom right, white, var(--red)) no-repeat center center fixed;
+            }
+        </style>
         <script defer type="application/javascript" src="script.js"></script>
     </head>
     <body>
         <header>
-            <a href="index.html"><img src="SUA%20Banner.png"></a>
+            <a href="index.html"><img src="SUA%20Banner.png" alt="SUA Banner"></a>
             <nav>
                 <button type="button" onclick="location.href='members.html'">Mitglieder</button>
-                <button type="button" disabled>Kontakt</button>
+                <button type="button" onclick="location.href='#'" id="current">Kontakt</button>
+                <button type="button" onclick="location.href='impressum.html'">Impressum</button>
                 <button type="button">Anmelden</button>
             </nav>
         </header>
-        <h1>So sind wir erreichbar: </h1>
-        <div>
-            Adresse: Kälberweg 2, 5845x Annen <br>
-            Trainingszeiten: immer
+        <div id="hdiv">
+            <img id="flipped" class="spacer" src="favicon.ico" alt="Springer">
+            <h1>Kontakt, Training und mehr</h1>
+            <img class="spacer" src="favicon.ico" alt="Springer">
         </div>
+        <main style="margin: 0px auto; width: fit-content;">
+            <h2>Adresse</h2>
+            <address>SU Annen Schachzentrum <br> Kälberweg 2 <br> 58455 Witten-Annen</address>
+            <h2>Kontakt</h2>
+            <p>Telefon: 01 57 / 36 85 55 58 <br> E-mail: <a href="mailto:info@sua-schach.de">info@sua-schach.de</a></p>
+            <h2>Trainingszeiten</h2>
+            <ul>
+                <li>Freitag 16:30 bis 17:30 &#8594; U9-Training</li>
+                <li>Freitag 17:30 bis 19:00 &#8594; Jugendtraining</li>
+                <li>Freitag 19:30 bis 21:00 &#8594; Partien und interne Turniere</li>
+            </ul>
+            Wir haben außerdem eine Partnerschaft mit dem Jugendzentrum Famous (Annenstraße 120): <br>
+            <ul><li>Donnerstag 17:30 bis 19:00 &#8594; Schach spielen im Famous</li></ul>
+        </main>
     </body>
 </html>
