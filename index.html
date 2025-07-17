@@ -10,20 +10,18 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <style>
-            body {
-                background-image: repeating-conic-gradient(var(--dark) 0% 25%, var(--light) 0% 50%);
-                background-size: 80px 80px;
-            }
             #column-container {
-                background-image: linear-gradient(to bottom right, var(--light), var(--dark));
-                margin: 10px;
+                margin: 10px 20px;
                 display: flex;
+                background-image: repeating-conic-gradient(var(--dark) 0% 25%, var(--light) 0% 50%);
+                background-size: 40px 40px;
             }
             .column {
                 width: 50%;
-                margin: 10px;
+                margin: 20px;
                 padding: 5px;
                 border: 2px dotted darkgrey;
+                background-color: rgba(255, 255, 255, 0.7);
             }
         </style>
         <script defer type="application/javascript" src="script.js"></script>
@@ -32,6 +30,7 @@
         <header>
             <a href="#"><img src="SUA%20Banner.png" alt="SUA Banner"></a>
             <nav>
+                <button type="button" id="sidebar-toggle" onclick="toggleSidebar()"><img src="Hamburger%20menu%20icon.png" alt="Menu"></button>
                 <button type="button" onclick="location.href='members.html'">Mitglieder</button>
                 <button type="button" onclick="location.href='contact.html'">Kontakt</button>
                 <button type="button" onclick="location.href='impressum.html'">Impressum</button>
@@ -48,13 +47,13 @@
                 <div class="column">
                     <article>
                         <h2>Neuigkeiten</h2>
-                        <p>Etwas ist passiert!</p>
+                        <p>Etwas ist passiert!</p><br><br><br><br><br><br><br><br><br><br><br><br>
                     </article>
                 </div>
                 <div class="column">
                     <article>
                         <h2>Nächste Ereignisse</h2>
-                        <p>Sommerferien</p>
+                        <p>Sommerferien</p><br><br><br><br><br><br><br><br><br><br><br><br>
                     </article>
                 </div>
             </div>
