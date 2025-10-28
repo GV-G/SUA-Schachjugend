@@ -1,62 +1,69 @@
 <!DOCTYPE html>
 <html lang="de">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="keywords" content="sport, annen, schach, jugend">
-        <meta name="description" content="Die Seite der Schachjugendabteilung der Sport-Union Annen ">
-        <meta name="author" content="G. Vega--Grodwohl">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Schachjugend Sport-Union Annen</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <style>
-            #column-container {
-                margin: 10px 20px;
-                display: flex;
-                background-image: repeating-conic-gradient(var(--dark) 0% 25%, var(--light) 0% 50%);
-                background-size: 40px 40px;
-            }
-            .column {
-                width: 50%;
-                margin: 20px;
-                padding: 5px;
-                border: 2px dotted darkgrey;
-                background-color: rgba(255, 255, 255, 0.7);
-            }
-        </style>
-        <script defer type="application/javascript" src="script.js"></script>
-    </head>
-    <body>
-        <header>
-            <a href="#"><img src="SUA%20Banner.png" alt="SUA Banner"></a>
-            <nav>
-                <button type="button" id="sidebar-toggle" onclick="toggleSidebar()"><img src="Hamburger%20menu%20icon.png" alt="Menu"></button>
-                <button type="button" onclick="location.href='members.html'">Mitglieder</button>
-                <button type="button" onclick="location.href='contact.html'">Kontakt</button>
-                <button type="button" onclick="location.href='impressum.html'">Impressum</button>
-                <button type="button">Anmelden</button>
-            </nav>
-        </header>
-        <div id="hdiv">
-            <img id="flipped" class="spacer" src="favicon.ico" alt="Springer">
-            <h1>Willkommen bei der Jugendschachabteilung der <wbr><span class="brand">Sport-Union Annen</span>!</h1>
-            <img class="spacer" src="favicon.ico" alt="Springer">
-        </div>
-        <main>
-            <div id="column-container">
-                <div class="column">
-                    <article>
-                        <h2>Neuigkeiten</h2>
-                        <p>Etwas ist passiert!</p><br><br><br><br><br><br><br><br><br><br><br><br>
-                    </article>
-                </div>
-                <div class="column">
-                    <article>
-                        <h2>Nächste Ereignisse</h2>
-                        <p>Sommerferien</p><br><br><br><br><br><br><br><br><br><br><br><br>
-                    </article>
-                </div>
-            </div>
-        </main>
-    </body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="sport, annen, schach, jugend">
+		<meta name="description" content="Die Seite der Schachjugendabteilung der Sport-Union Annen ">
+		<meta name="author" content="G. Vega--Grodwohl">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Schachjugend Sport-Union Annen</title>
+		<link rel="stylesheet" href="styles.css">
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+		<style>
+			#column-container {
+				margin: 10px 20px;
+				display: flex;
+				background-image: repeating-conic-gradient(var(--dark) 0% 25%, var(--light) 0% 50%);
+				background-size: 40px 40px;
+			}
+			.column {
+				width: 50%;
+				margin: 20px;
+				padding: 5px;
+				border: 2px dotted darkgrey;
+				background-color: rgba(255, 255, 255, 0.7);
+			}
+		</style>
+		<script defer type="application/javascript" src="script.js"></script>
+	</head>
+	<body>
+		<header>
+			<a href="#"><img id="banner" src="SUA%20Banner.png" alt="SUA Banner"></a>
+			<nav>
+				<button type="button" id="sidebar-close" onclick="closeSidebar()">
+					<img src="Close menu icon.png" alt="Close" />
+				</button>
+				<button type="button" onclick="location.href='#'" id="current">Haupt</button>
+				<button type="button" onclick="location.href='members.html'">Mitglieder</button>
+				<button type="button" onclick="location.href='contact.html'">Kontakt</button>
+				<button type="button" onclick="location.href='impressum.html'">Impressum</button>
+				<button type="button">Anmelden</button>
+			</nav>
+			<button type="button" id="sidebar-open" onclick="openSidebar()">
+				<img src="Hamburger menu icon.png" alt="Menu" />
+			</button>
+			<div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+		</header>
+		<div id="hdiv">
+			<img id="flipped" class="spacer" src="favicon.ico" alt="Springer">
+			<h1>Willkommen bei der Jugendschach-<wbr>Abteilung der <wbr><span class="brand">Sport-Union Annen</span>!</h1>
+			<img class="spacer" src="favicon.ico" alt="Springer">
+		</div>
+		<main>
+			<div id="column-container">
+				<div class="column">
+					<article>
+						<h2>Neuigkeiten</h2>
+						<p>Etwas ist passiert!</p><br><br><br><br><br><br><br><br><br><br><br><br>
+					</article>
+				</div>
+				<div class="column">
+					<article>
+						<h2>Nächste Ereignisse</h2>
+						<p>Sommerferien</p><br><br><br><br><br><br><br><br><br><br><br><br>
+					</article>
+				</div>
+			</div>
+		</main>
+	</body>
 </html>

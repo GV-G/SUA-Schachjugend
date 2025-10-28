@@ -1,29 +1,50 @@
-const openButton = document.getElementById('sidebar-toggle');
+const openButton = document.getElementById('sidebar-open');
 const navbar = document.getElementsByTagName('nav')[0];
-const homeImage = document.getElementsByTagName('header')[0];
 
-const media = window.matchMedia("(width < 700px)");
-media.addEventListener('change', (e) => updateNavbar(e));
+const foldNav = window.matchMedia("(width < 1000px)");
+foldNav.addEventListener('change', (e) => updateNavbar(e));
 
+const banner = window.matchMedia("(width < 400px)");
+banner.addEventListener('change', (e) => switchBannerImage(e));
+
+/**
+ * Pre-change the navbar to fit smaller screens
+ * @param {boolean} e Whether the width of the screen is small enough
+ */
 function updateNavbar(e) {
-  const isMobile = e.matches;
-  if (isMobile) {
+  if (e.matches) {
     navbar.setAttribute('inert', '');
   } else {
     navbar.removeAttribute('inert');
   }
 }
 
-function togglesidebar() {
-    if (navbar.classList.contains('show')) {
-        navbar.classList.remove('show');
-        openButton.setAttribute('aria-expanded', 'false');
-        navbar.setAttribute('inert', '');
-    } else {
-        navbar.classList.add('show');
-        openButton.setAttribute('aria-expanded', 'true');
-        navbar.removeAttribute('inert');
-    }
+/** Change the banner image if the window is not wide enough */
+function switchBannerImage(e) {
+  if (e.matches) {
+    document.getElementById('banner').setAttribute('src', 'SUA%20Logo.png');
+  } else {
+    document.getElementById('banner').setAttribute('src', 'SUA%20Banner.png');
+  }
 }
 
-updateNavbar(media);
+/**
+ * Set the navbar class and attribute to hide it
+ */
+function closeSidebar() {
+  navbar.classList.remove('show');
+  openButton.setAttribute('aria-expanded', 'false');
+  navbar.setAttribute('inert', '');
+}
+
+/**
+ * Set the navbar class and attribute to show it
+ */
+function openSidebar() {
+  navbar.classList.add('show');
+  openButton.setAttribute('aria-expanded', 'true');
+  navbar.removeAttribute('inert');
+}
+
+updateNavbar(foldNav);
+switchBannerImage(banner);

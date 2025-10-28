@@ -38,15 +38,23 @@
         <script defer type="application/javascript" src="script.js"></script>
     </head>
     <body>
-        <header>
-            <a href="index.html"><img src="SUA%20Banner.png" alt="SUA Banner"></a>
-            <nav>
-                <button type="button" onclick="location.href='#'" id="current">Mitglieder</button>
-                <button type="button" onclick="location.href='contact.html'">Kontakt</button>
-                <button type="button" onclick="location.href='impressum.html'">Impressum</button>
-                <button type="button">Anmelden</button>
-            </nav>
-        </header>
+		<header>
+			<a href="index.html"><img id="banner" src="SUA%20Banner.png" alt="SUA Banner"></a>
+			<nav>
+				<button type="button" id="sidebar-close" onclick="closeSidebar()">
+					<img src="Close menu icon.png" alt="Close" />
+				</button>
+				<button type="button" onclick="location.href='index.html'">Haupt</button>
+				<button type="button" onclick="location.href='#'" id="current">Mitglieder</button>
+				<button type="button" onclick="location.href='contact.html'">Kontakt</button>
+				<button type="button" onclick="location.href='impressum.html'">Impressum</button>
+				<button type="button">Anmelden</button>
+			</nav>
+			<button type="button" id="sidebar-open" onclick="openSidebar()">
+				<img src="Hamburger menu icon.png" alt="Menu" />
+			</button>
+			<div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+		</header>
         <div id="hdiv">
             <img id="flipped" class="spacer" src="favicon.ico" alt="Springer">
             <h1>Alle Mitglieder unseres Vereins:</h1>
